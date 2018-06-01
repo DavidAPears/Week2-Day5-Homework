@@ -20,4 +20,14 @@ class GuestTest < Minitest::Test
     assert_equal("David", @guest1.name)
   end
 
+  def test_guest_fave_song
+    assert_equal("Wonderwall", @guest4.fave_song)
+  end
+
+  def test_guest_age
+    assert_equal(25, @guest3.age)
+  end
+
+  
+
 end
