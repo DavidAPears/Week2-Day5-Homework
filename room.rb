@@ -24,4 +24,8 @@ class Room
     @people_in_room.delete(guest_leaves)
   end
 
+  def add_song_to_room(new_song)
+    @songs.push(new_song)
+  end
+
 end
