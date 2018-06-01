@@ -8,8 +8,9 @@ require ("minitest/rg")
 class RoomTest < Minitest::Test
 
   def setup
-    @room1 = Room.new("The Karaoke Cave", 275, 4 )
-    @room2 = Room.new("", 150, 7)
+    @room1 = Room.new("The Karaoke Cave", 275, 4, 15)
+    @room2 = Room.new("5 Bar", 150, 7, 20)
+    @room3 = Room.new("Limelight Bar", 130, 12, 50)
 
     @song1= Song.new("Hey Jude", "The Beatles")
     @song2= Song.new("Sweet Caroline", "Neil Diamond")
@@ -27,6 +28,10 @@ class RoomTest < Minitest::Test
 
   def test_check_songs
     assert_equal(4, @room1.songs)
+  end
+
+  def test_check_capacity
+    assert_equal(50, @room3.capacity)
   end
 
 end
