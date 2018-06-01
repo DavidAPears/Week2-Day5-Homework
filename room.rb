@@ -20,4 +20,8 @@ class Room
     @people_in_room.push(new_guest)
   end
 
+  def remove_guest_from_room(guest_leaves)
+    @people_in_room.delete(guest_leaves)
+  end
+
 end
